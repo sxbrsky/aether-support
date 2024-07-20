@@ -1,0 +1,6 @@
+/.idea
+/.fleet
+/.vscode
+
+composer.lock
+/vendor/

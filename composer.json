@@ -1,0 +1,31 @@
+{
+    "name": "nulxrd/splx",
+    "description": "An extension to the Standard PHP Library (SPL).",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dominik Szamburski",
+            "email": "dominikszamburski99@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "2.0.x-dev",
+        "phpunit/phpunit": "11.3.x-dev",
+        "friendsofphp/php-cs-fixer": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Spl\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spl\\Tests\\": "tests/"
+        }
+    }
+}

@@ -4,3 +4,7 @@
 
 composer.lock
 /vendor/
+
+# phpunit
+.phpunit.cache
+phpunit.xml

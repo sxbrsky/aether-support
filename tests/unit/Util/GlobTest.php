@@ -9,11 +9,11 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Splx\Tests\Unit;
+namespace Splx\Tests\Unit\Util;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use Splx\Glob;
+use Splx\Util\Glob;
 
 #[CoversClass(Glob::class)]
 class GlobTest extends TestCase

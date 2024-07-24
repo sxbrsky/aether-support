@@ -12,7 +12,7 @@
 namespace Splx;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template TValue
  *
  * @extends \Splx\Collection<TKey, TValue>
@@ -32,7 +32,7 @@ interface SetInterface extends Collection
     /**
      * Removes given values from the set.
      *
-     * @param mixed ...$values
+     * @param TValue ...$values
      *  The values to remove.
      *
      * @return void
@@ -42,34 +42,34 @@ interface SetInterface extends Collection
     /**
      * Creates a new set using values from the current set and another set.
      *
-     * @param \Splx\SetInterface $set
+     * @param \Splx\SetInterface<TKey, TValue> $set
      *  The other set, to combine with the current set.
      *
-     * @return \Splx\SetInterface
+     * @return \Splx\SetInterface<TKey, TValue>
      *  A new set containing all the values of the current set as well as another set.
      *
      */
-    public function union(SetInterface $set): static;
+    public function union(SetInterface $set): \Splx\SetInterface;
 
     /**
      * Creates a new set by intersecting values with another set.
      *
-     * @param \Splx\SetInterface $set
+     * @param \Splx\SetInterface<TKey, TValue> $set
      *  The other set.
      *
-     * @return \Splx\SetInterface
+     * @return \Splx\SetInterface<TKey, TValue>
      *  The intersection of the current set and another set.
      */
-    public function intersect(SetInterface $set): static;
+    public function intersect(SetInterface $set): \Splx\SetInterface;
 
     /**
      * Creates a new set using values that aren't in another set.
      *
-     * @param \Splx\SetInterface $set
+     * @param \Splx\SetInterface<TKey, TValue> $set
      *  Set containing the values to exclude.
      *
-     * @return \Splx\SetInterface
+     * @return \Splx\SetInterface<TKey, TValue>
      *  A new set containing all value that ware not in the other set.
      */
-    public function diff(SetInterface $set): static;
+    public function diff(SetInterface $set): \Splx\SetInterface;
 }

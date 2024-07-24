@@ -12,7 +12,7 @@
 namespace Splx;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template TValue
  *
  * @extends \Splx\Collection<TKey, TValue>
@@ -37,10 +37,20 @@ interface MapInterface extends Collection
      * @param TKey $key
      *  The key whose associated value is to be returned.
      *
-     * @return TValue
+     * @return TValue|null
      *  The value to which the specified key is mapped.
      */
     public function get(mixed $key): mixed;
+
+    /**
+     * Removes the element at the specified index from the collection.
+     *
+     * @param TKey ...$values
+     *  The key to remove.
+     *
+     * @return void
+     */
+    public function remove(mixed ...$values): void;
 
     /**
      * Checks whether the map contains a given key.

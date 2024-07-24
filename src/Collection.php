@@ -12,10 +12,11 @@
 namespace Splx;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template TValue
  *
  * @extends \ArrayAccess<TKey, TValue>
+ * @extends \IteratorAggregate<TKey, TValue>
  */
 interface Collection extends \ArrayAccess, \Countable, \IteratorAggregate
 {
@@ -63,7 +64,7 @@ interface Collection extends \ArrayAccess, \Countable, \IteratorAggregate
      * @param callable $callback
      *  The callback function to apply.
      *
-     * @return self
+     * @return \Splx\Collection<TKey, TValue>
      */
     public function each(callable $callback): self;
 
@@ -73,14 +74,14 @@ interface Collection extends \ArrayAccess, \Countable, \IteratorAggregate
      * @param callable $callback
      *  The callback function to determine if an element should be included.
      *
-     * @return self
+     * @return \Splx\Collection<TKey, TValue>
      */
     public function filter(callable $callback): self;
 
     /**
      * Returns the first item in this collection.
      *
-     * @return TValue
+     * @return TValue|false
      *  The first item in the collection.
      */
     public function first(): mixed;
@@ -88,7 +89,7 @@ interface Collection extends \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Returns the last item in this collection.
      *
-     * @return TValue
+     * @return TValue|false
      *  The last item in the collection.
      */
     public function last(): mixed;

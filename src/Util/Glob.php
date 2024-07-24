@@ -43,7 +43,7 @@ class Glob
      *  If provided, the flags will be combined with bitwise OR operation.
      *  Possible flag values can be found in the static::$flagsMap property.
      *
-     * @return array
+     * @return string[]
      *  An array containing the matched files and directories. If no matches are found, an empty array is returned.
      *
      * @throws \RuntimeException

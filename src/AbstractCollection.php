@@ -14,10 +14,10 @@ namespace Splx;
 use Traversable;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template TValue
  *
- * @extends \Splx\Collection<TKey, TValue>
+ * @implements \Splx\Collection<TKey, TValue>
  */
 abstract class AbstractCollection implements Collection
 {
@@ -26,6 +26,7 @@ abstract class AbstractCollection implements Collection
      */
     protected array $data = [];
 
+    /** @param array<TKey, TValue> $data */
     public function __construct(array $data = []) {
         foreach ($data as $key => $value) {
             $this[$key] = $value;

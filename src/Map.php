@@ -12,15 +12,17 @@
 namespace Splx;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template TValue
  *
+ * @extends \Splx\AbstractCollection<TKey, TValue>
  * @implements \Splx\MapInterface<TKey, TValue>
  */
 class Map extends AbstractCollection implements MapInterface
 {
     /**
-     * @inheritDoc
+     * {@inheritDoc}
+     * @param TKey $offset
      */
     public function offsetSet($offset, $value): void {
         $this->put($offset, $value);
@@ -72,7 +74,7 @@ class Map extends AbstractCollection implements MapInterface
     public function get(mixed $key): mixed
     {
         $hash = $this->hash($key);
-        if (!array_key_exists($hash, $this->data)) {
+        if (!\array_key_exists($hash, $this->data)) {
             return null;
         }
         return $this->data[$hash]['value'];
@@ -104,7 +106,7 @@ class Map extends AbstractCollection implements MapInterface
     /**
      * Generates a hash value of the given value.
      *
-     * @param TValue $value
+     * @param TKey $value
      *  The value to hash.
      *
      * @return string

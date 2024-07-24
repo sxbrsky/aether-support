@@ -12,9 +12,10 @@
 namespace Splx;
 
 /**
- * @template TKey
+ * @template TKey of array-key
  * @template TValue
  *
+ * @extends \Splx\AbstractCollection<TKey, TValue>
  * @implements \Splx\SetInterface<TKey, TValue>
  */
 class Set extends AbstractCollection implements SetInterface
@@ -59,7 +60,7 @@ class Set extends AbstractCollection implements SetInterface
     /**
      * @inheritDoc
      */
-    public function union(SetInterface $set): static
+    public function union(SetInterface $set): \Splx\SetInterface
     {
         $result = new static();
 
@@ -77,7 +78,7 @@ class Set extends AbstractCollection implements SetInterface
     /**
      * @inheritDoc
      */
-    public function intersect(SetInterface $set): static
+    public function intersect(SetInterface $set): \Splx\SetInterface
     {
         $result = new static();
 
@@ -93,7 +94,7 @@ class Set extends AbstractCollection implements SetInterface
     /**
      * @inheritDoc
      */
-    public function diff(SetInterface $set): static
+    public function diff(SetInterface $set): \Splx\SetInterface
     {
         $result = new static();
 
@@ -109,7 +110,7 @@ class Set extends AbstractCollection implements SetInterface
     /**
      * Generates a hash value of the given value.
      *
-     * @param TValue $value
+     * @param TValue|TKey $value
      *  The value to hash.
      *
      * @return string

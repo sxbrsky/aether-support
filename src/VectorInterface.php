@@ -12,7 +12,7 @@
 namespace Splx;
 
 /**
- * @template TKey
+ * @template TKey of int|string
  * @template TValue
  *
  * @extends \Splx\Collection<TKey, TValue>
@@ -45,7 +45,7 @@ interface VectorInterface extends Collection
     /**
      * Removes the last value of the vector.
      *
-     * @return TValue
+     * @return TValue|null
      *  The removed last value.
      *
      * @throws \UnderflowException

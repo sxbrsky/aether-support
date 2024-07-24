@@ -11,6 +11,13 @@
 
 namespace Splx;
 
+/**
+ * @template TKey of array-key
+ * @template TValue
+ *
+ * @extends \Splx\AbstractCollection<TKey, TValue>
+ * @implements \Splx\VectorInterface<TKey, TValue>
+ */
 class Vector extends AbstractCollection implements VectorInterface
 {
 

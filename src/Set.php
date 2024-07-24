@@ -23,7 +23,8 @@ class Set extends AbstractCollection implements SetInterface
     /**
      * @inheritDoc
      */
-    public function offsetSet($offset, $value): void {
+    public function offsetSet($offset, $value): void
+    {
         $this->add($value);
     }
 
@@ -32,8 +33,8 @@ class Set extends AbstractCollection implements SetInterface
      */
     public function contains(mixed $value): bool
     {
-       $hash = $this->hash($value);
-       return isset($this->data[$hash]);
+        $hash = $this->hash($value);
+        return isset($this->data[$hash]);
     }
 
     /**
@@ -50,7 +51,8 @@ class Set extends AbstractCollection implements SetInterface
     /**
      * @inheritDoc
      */
-    public function remove(mixed ...$values): void {
+    public function remove(mixed ...$values): void
+    {
         foreach ($values as $value) {
             $hash = $this->hash($value);
             unset($this->data[$hash]);

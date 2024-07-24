@@ -51,7 +51,8 @@ class Glob
      * @throws \InvalidArgumentException
      *  If the provided pattern exceeds the maximum allowed length of 4096 characters.
      */
-    public function glob(string $pattern, int $flags = 0): array {
+    public function glob(string $pattern, int $flags = 0): array
+    {
         if (\strlen($pattern) > 4096) {
             throw new \InvalidArgumentException(
                 'Pattern exceeds the maximum allowed length of 4096 characters'

@@ -24,35 +24,40 @@ class Map extends AbstractCollection implements MapInterface
      * {@inheritDoc}
      * @param TKey $offset
      */
-    public function offsetSet($offset, $value): void {
+    public function offsetSet($offset, $value): void
+    {
         $this->put($offset, $value);
     }
 
     /**
      * @inheritDoc
      */
-    public function offsetGet($offset): mixed {
+    public function offsetGet($offset): mixed
+    {
         return $this->get($offset);
     }
 
     /**
      * @inheritDoc
      */
-    public function offsetExists($offset): bool {
+    public function offsetExists($offset): bool
+    {
         return $this->containsKey($offset);
     }
 
     /**
      * @inheritDoc
      */
-    public function offsetUnset($offset): void {
+    public function offsetUnset($offset): void
+    {
         $this->remove($offset);
     }
 
     /**
      * @inheritDoc
      */
-    public function remove(mixed ...$values): void {
+    public function remove(mixed ...$values): void
+    {
         foreach ($values as $value) {
             $hash = $this->hash($value);
             unset($this->data[$hash]);

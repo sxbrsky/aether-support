@@ -20,7 +20,6 @@ namespace Splx;
  */
 class Vector extends AbstractCollection implements VectorInterface
 {
-
     /**
      * @inheritDoc
      */

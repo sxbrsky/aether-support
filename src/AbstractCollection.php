@@ -27,7 +27,8 @@ abstract class AbstractCollection implements Collection
     protected array $data = [];
 
     /** @param array<TKey, TValue> $data */
-    public function __construct(array $data = []) {
+    public function __construct(array $data = [])
+    {
         foreach ($data as $key => $value) {
             $this[$key] = $value;
         }

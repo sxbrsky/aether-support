@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/splx.
+ * This file is part of the sxbrsky/splx.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *

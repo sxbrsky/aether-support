@@ -7,7 +7,7 @@ The goal of the project is to enhance the existing SPL classes and interfaces an
 
 ## Support
 
-If you have any questions or need help open an issue on [GitHub Issues](https://github.com/nulxrd/splx/issues).
+If you have any questions or need help open an issue on [GitHub Issues](https://github.com/sxbrsky/splx/issues).
 
 ## License
 

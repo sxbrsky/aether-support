@@ -14,7 +14,7 @@
     },
     "require-dev": {
         "phpstan/phpstan": "2.0.x-dev",
-        "phpunit/phpunit": "11.3.x-dev",
+        "phpunit/phpunit": "11.4.x-dev",
         "friendsofphp/php-cs-fixer": "dev-master",
         "mockery/mockery": "2.0.x-dev"
     },

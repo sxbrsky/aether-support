@@ -1,8 +1,12 @@
-/.idea
-/.fleet
-/.vscode
+# ide
+/.idea/
+/.fleet/
+/.run/
+/.vscode/
 
+# composer
 composer.lock
+composer.phar
 /vendor/
 
 # phpunit
@@ -11,3 +15,8 @@ phpunit.xml
 
 # php-cs-fixer
 .php-cs-fixer.cache
+.php-cs-fixer.php
+
+# phpstan
+.phpstan.cache
+.phpstan.neon

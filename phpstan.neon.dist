@@ -1,8 +1,9 @@
 parameters:
-	checkGenericClassInNonGenericObjectType: false
 	treatPhpDocTypesAsCertain: false
 	level: 6
 	paths:
 		- src
 	ignoreErrors:
 		- "#^Unsafe usage of new static#"
+		- identifier: missingType.generics
+

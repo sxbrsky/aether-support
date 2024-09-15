@@ -36,8 +36,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Splx\\Stubs\\": "tests/stubs/",
-            "Splx\\Tests\\Unit\\": "tests/unit/"
+            "Splx\\Tests\\": "tests/Tests/"
         }
     },
     "config": {

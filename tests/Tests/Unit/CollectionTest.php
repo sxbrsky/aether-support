@@ -15,7 +15,7 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Splx\AbstractCollection;
 use Splx\Collection;
-use Splx\Stubs\DummyCollection;
+use Splx\Tests\Stubs\DummyCollection;
 
 #[CoversClass(AbstractCollection::class)]
 class CollectionTest extends TestCase
